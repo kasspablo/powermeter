@@ -1,1 +1,14 @@
-Lo único extra que tiene la API del challenge, es un GET en el api/save/ que lo utilicé para poder ver los valores que se cargaban a través del POST.Por otro lado, separe el archivo de settings para su configuración en el lado del servidor más cómodo. Trate de utilizar las mejores prácticas, dejar el código bien limpio y que hable por sí mismo.El tipo de autenticación que usaría sería el JWT por ser uno de los más rápidos ya sea por el lado de su implementación y por el lado del uso. Pero como todo tiene sus pros y contras, habría que ver lo que se realmente se está buscando para el sistema.Para el almacenamiento de los valores de los sensores, es verdad que con el tiempo harían las tablas de la base de datos enorme. Yo trataría de mantener la base de datos lo más preparada posible para este caso, armaria varias tablas en vez de tener una sola, seguramente divididas por rangos de fechas, para en su momento, borrar algunas sin problemas y pasar esos datos en un archivo por si se quiere recuperar algún dato en algún momento.También solo almacenaria los datos deltas, osea el dato inicial y luego cuando cambie su valor, almacenando el horario y fecha por supuesto.
+Lo único extra que tiene la API del challenge, es un GET en el api/save/ que lo utilicé 
+para poder ver los valores que se cargaban a través del POST.Por otro lado, separe el 
+archivo de settings para su configuración en el lado del servidor más cómodo. 
+Trate de utilizar las mejores prácticas, dejar el código bien limpio y que hable por sí 
+mismo.El tipo de autenticación que usaría sería el JWT por ser uno de los más rápidos ya 
+sea por el lado de su implementación y por el lado del uso. Pero como todo tiene sus pros 
+y contras, habría que ver lo que se realmente se está buscando para el sistema.Para el 
+almacenamiento de los valores de los sensores, es verdad que con el tiempo harían las 
+tablas de la base de datos enorme. Yo trataría de mantener la base de datos lo más 
+preparada posible para este caso, armaria varias tablas en vez de tener una sola, 
+seguramente divididas por rangos de fechas, para en su momento, borrar algunas sin 
+problemas y pasar esos datos en un archivo por si se quiere recuperar algún dato en algún 
+momento.También solo almacenaria los datos deltas, osea el dato inicial y luego cuando 
+cambie su valor, almacenando el horario y fecha por supuesto.
