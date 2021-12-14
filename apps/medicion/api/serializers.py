@@ -71,20 +71,4 @@ class MedicionAvgSerializer(serializers.ModelSerializer):
             }
         return {
             'avg': int(instance['avg'])
-        }
-
-
-
-# class MedicionAvgSerializer(serializers.Serializer):
-#     avg = serializers.FloatField()
-
-#     def to_representation(self,instance):
-#         if abs(instance['avg']) > abs(int(instance['avg'])):
-#             return {
-#                 'avg':instance['avg']
-#             }
-#         return {
-#                 'avg': int(instance['avg'])
-#             }
-
-    
+        }    
