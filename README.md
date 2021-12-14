@@ -17,7 +17,9 @@ La forma en que lo probaremos es haciendo múltiples POST de este estilo:
 Y luego hacer GET para obtener el valor máximo, mínimo y el promedio
 
 `curl http://localhost:8000/api/get/max`
+
 `curl http://localhost:8000/api/get/min`
+
 `curl http://localhost:8000/api/get/avg`
 
 Los tres casos deberían devolver un json de la forma:
